@@ -294,7 +294,7 @@ public abstract class Camera1Base
         } else {
           glInterface.setEncoderSize(width, height);
         }
-        glInterface.setRotation(0);
+        glInterface.setRotation(rotation);
         glInterface.start();
         cameraManager.setSurfaceTexture(glInterface.getSurfaceTexture());
       }
@@ -306,6 +306,7 @@ public abstract class Camera1Base
     }
   }
 
+  
   public void startPreview(CameraHelper.Facing cameraFacing, int width, int height) {
     startPreview(cameraFacing, width, height, CameraHelper.getCameraOrientation(context));
   }
