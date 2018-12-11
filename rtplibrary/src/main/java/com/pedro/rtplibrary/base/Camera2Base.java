@@ -290,7 +290,7 @@ public abstract class Camera2Base implements GetAacData, GetVideoData, GetMicrop
         } else {
           glInterface.setEncoderSize(videoEncoder.getHeight(), videoEncoder.getWidth());
         }
-        glInterface.setRotation(rotation == 0 ? 270 : rotation - 90);
+        glInterface.setRotation(rotation);
         glInterface.start();
         cameraManager.prepareCamera(glInterface.getSurfaceTexture(), videoEncoder.getWidth(),
             videoEncoder.getHeight());
